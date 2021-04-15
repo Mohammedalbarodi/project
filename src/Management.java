@@ -60,7 +60,34 @@ public class Management {
        // purchasee1=new ArrayList<>();
         purchasee1. addLast(sal);
     }
+    public boolean searshe(String id){
+        product tmp;
+        for (tmp=head; tmp!=null&&!tmp.ID_producer.equals(id);temp=temp.next);
+        return tmp!=null;
+    }
 
+    public boolean edit(String searsh_idprodact ,String ID_producer, String name_producer,  double price, String unit){
+        boolean success =false;
+        product temp=searshe(searsh_idprodact);
+        if (temp !=null) {
+            product x = new product(String ID_producer, String name_producer, double price, String unit);
+            success = true;
+        }
+        return success;
+        }
+    }
+
+
+
+    public E removeFirst() {
+        if (isEmpty()) return null;
+        E deleted = head.getElement();
+        head = head.getNext();
+        size--;
+        if (size == 0)
+            tail = null;
+        return deleted;
+    }
     public String print() {
         String all = "";
         Node<purchasee> i = head;

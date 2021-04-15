@@ -22,6 +22,10 @@ if(type==1)
          products.addLast(new Household_items(ID_producer,name_producer,price,unit));
 
  }
+
+
+
+
     public String print() {
         String all = "";
         Node<product> i = head;

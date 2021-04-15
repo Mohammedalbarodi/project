@@ -17,6 +17,15 @@ public class purchasee {
         ProductLine pl=new ProductLine(p,quantity);
         prodachine1.add(pl);
     }
+    public E removeFirst() {
+        if (isEmpty()) return null;
+        E deleted = head.getElement();
+        head = head.getNext();
+        size--;
+        if (size == 0)
+            tail = null;
+        return deleted;
+    }
 
     @Override
     public String toString() {

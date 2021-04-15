@@ -18,6 +18,15 @@ public class Manage_purchasee {
         purchasee1. addLast(proh1);
 
     }
+    public E removeFirst() {
+        if (isEmpty()) return null;
+        E deleted = head.getElement();
+        head = head.getNext();
+        size--;
+        if (size == 0)
+            tail = null;
+        return deleted;
+    }
     public String print() {
         String all = "";
         Node<purchasee> i = head;
